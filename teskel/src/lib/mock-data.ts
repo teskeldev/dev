@@ -1,0 +1,245 @@
+export const marketplacePackages = [
+  {
+    slug: "nextjs-saas-pro",
+    title: "Next.js SaaS Pro Pack",
+    description: "Production-ready AI rules, workflows, and runbooks for building SaaS with Next.js.",
+    type: "skill-pack" as const,
+    category: "Skills",
+    creator: "Sarah Chen",
+    creatorHandle: "sarahchen",
+    verified: true,
+    price: 49,
+    rating: 4.9,
+    installs: 12400,
+    compatibility: ["teskel", "claude", "cursor", "copilot"],
+    icon: "Layers",
+  },
+  {
+    slug: "security-review-agent",
+    title: "Security Review Agent",
+    description: "Automated security review for your codebase with actionable fix suggestions.",
+    type: "agent-pack" as const,
+    category: "Security",
+    creator: "Alex Rivera",
+    creatorHandle: "alexrivera",
+    verified: true,
+    price: 29,
+    rating: 4.8,
+    installs: 7800,
+    compatibility: ["teskel", "claude", "cursor"],
+    icon: "Shield",
+  },
+  {
+    slug: "stripe-billing-integration",
+    title: "Stripe Billing Integration",
+    description: "Complete Stripe billing setup with subscriptions, invoices, and customer portal.",
+    type: "integration-pack" as const,
+    category: "Automation",
+    creator: "Marcus Lee",
+    creatorHandle: "marcuslee",
+    verified: true,
+    price: 39,
+    rating: 4.9,
+    installs: 9100,
+    compatibility: ["teskel", "cursor", "copilot"],
+    icon: "CreditCard",
+  },
+  {
+    slug: "saas-dashboard-ui-kit",
+    title: "SaaS Dashboard UI Kit",
+    description: "Beautiful dashboard components with charts, tables, and data visualizations.",
+    type: "ui-kit" as const,
+    category: "UI Kits",
+    creator: "Emma Wilson",
+    creatorHandle: "emmawilson",
+    verified: true,
+    price: 59,
+    rating: 4.7,
+    installs: 5600,
+    compatibility: ["teskel", "cursor"],
+    icon: "LayoutDashboard",
+  },
+  {
+    slug: "production-incident-runbook",
+    title: "Production Incident Runbook",
+    description: "Step-by-step incident response procedures for production environments.",
+    type: "runbook-pack" as const,
+    category: "Docs",
+    creator: "James Park",
+    creatorHandle: "jamespark",
+    verified: true,
+    price: 0,
+    rating: 4.8,
+    installs: 18200,
+    compatibility: ["teskel", "claude", "cursor", "copilot", "windsurf"],
+    icon: "BookOpen",
+  },
+  {
+    slug: "playwright-e2e-testing",
+    title: "Playwright E2E Testing Pack",
+    description: "Comprehensive E2E testing workflows with Playwright, CI/CD integration, and reports.",
+    type: "testing-pack" as const,
+    category: "Testing",
+    creator: "Nina Patel",
+    creatorHandle: "ninapatel",
+    verified: false,
+    price: 19,
+    rating: 4.6,
+    installs: 4300,
+    compatibility: ["teskel", "cursor"],
+    icon: "TestTube",
+  },
+];
+
+export const packageCategories = [
+  "Skills",
+  "Agents",
+  "Templates",
+  "Recipes",
+  "UI Kits",
+  "Design Packs",
+  "Automation",
+  "Security",
+  "Testing",
+  "Docs",
+];
+
+export const pricingPlans = [
+  {
+    name: "Free",
+    price: 0,
+    description: "Try workspace + free packages",
+    features: [
+      "Basic workspace",
+      "3 projects",
+      "Free packages only",
+      "Community support",
+      "500 AI messages/mo",
+    ],
+    cta: "Get started",
+    popular: false,
+  },
+  {
+    name: "Pro",
+    price: 19,
+    description: "Individual power users",
+    features: [
+      "Unlimited workspaces",
+      "Unlimited projects",
+      "All free + paid packages",
+      "Priority support",
+      "Unlimited AI messages",
+      "Snapshots & restore",
+      "Custom recipes",
+      "Advanced AI agents",
+    ],
+    cta: "Start Pro trial",
+    popular: true,
+  },
+  {
+    name: "Team",
+    price: 39,
+    description: "Teams and shared packages",
+    features: [
+      "Everything in Pro",
+      "Shared workspaces",
+      "Private packages",
+      "Team members",
+      "Audit logs",
+      "Role-based access",
+      "Internal marketplace",
+      "Priority onboarding",
+    ],
+    cta: "Start Team trial",
+    popular: false,
+    perUser: true,
+  },
+  {
+    name: "Enterprise",
+    price: -1,
+    description: "Private registry and governance",
+    features: [
+      "Everything in Team",
+      "SSO / SAML",
+      "Private registry",
+      "Policy controls",
+      "Custom runtime",
+      "Compliance tools",
+      "Dedicated support",
+      "SLA guarantee",
+    ],
+    cta: "Contact sales",
+    popular: false,
+  },
+];
+
+export const faqItems = [
+  {
+    question: "Is Teskel a desktop app?",
+    answer:
+      "No. Teskel is a cloud-first web SaaS application. You access your workspace entirely through the browser — no downloads or installations required. Your projects, terminal, editor, and AI tools are all available from any device.",
+  },
+  {
+    question: "How is Teskel different from Cursor?",
+    answer:
+      "Cursor focuses on AI-powered code editing inside a desktop IDE. Teskel is a browser-based all-in-one workspace that combines terminal, editor, preview, notes, AI agents, and a package marketplace. Think of Teskel as your complete cloud development environment with a built-in ecosystem.",
+  },
+  {
+    question: "What can be sold on the marketplace?",
+    answer:
+      "Developers can sell skill packs, AI agent configurations, project templates, command recipes, UI kits, automation workflows, runbooks, security packs, and more. Any reusable developer workflow can be packaged and sold.",
+  },
+  {
+    question: "Can teams create private packages?",
+    answer:
+      "Yes. Team and Enterprise plans include a private marketplace where you can publish internal packages — engineering standards, deployment workflows, incident runbooks, onboarding templates, and more — visible only to your team members.",
+  },
+  {
+    question: "Can packages run commands?",
+    answer:
+      "Some packages include command recipes that can execute in your workspace terminal. All command-containing packages require explicit approval before execution. You always see what a package will do before it runs.",
+  },
+  {
+    question: "Does Teskel support AI agents?",
+    answer:
+      "Yes. Teskel supports AI agents that can understand your project context — files, terminal output, installed packages, notes, and history. Agents can suggest fixes, generate runbooks, review code, and run automated workflows, all with your approval.",
+  },
+  {
+    question: "Can I use Teskel without paying?",
+    answer:
+      "Absolutely. The Free plan includes a basic workspace, up to 3 projects, access to free marketplace packages, and 500 AI messages per month. Upgrade to Pro or Team when you need more power.",
+  },
+];
+
+export const workspaceFeatures = [
+  { title: "Cloud Terminal", description: "Full terminal access in your browser with session persistence.", icon: "Terminal" },
+  { title: "Code Editor", description: "Monaco-powered editor with syntax highlighting and IntelliSense.", icon: "Code" },
+  { title: "Browser Preview", description: "Live preview of your running application with hot reload.", icon: "Globe" },
+  { title: "Project Notes", description: "Markdown notes linked to your project sessions and snapshots.", icon: "FileText" },
+  { title: "Session Restore", description: "Open your project exactly where you left it, every time.", icon: "RotateCcw" },
+  { title: "Snapshots", description: "Save and restore complete workspace states at any point.", icon: "Camera" },
+  { title: "AI Assistant", description: "Context-aware AI that understands your files, terminal, and packages.", icon: "Sparkles" },
+  { title: "AI Agents", description: "Automated workflows that review, fix, and generate code with approval.", icon: "Bot" },
+  { title: "Package Installer", description: "Browse and install workflow packages directly into your project.", icon: "Package" },
+  { title: "Command Recipes", description: "Saved command sequences for common development tasks.", icon: "Zap" },
+  { title: "Project Timeline", description: "Complete history of commands, edits, installs, and AI actions.", icon: "Clock" },
+  { title: "Team Workspace", description: "Shared workspaces with role-based access and private packages.", icon: "Users" },
+];
+
+export const creatorFeatures = [
+  { title: "Package Publishing", description: "Create and publish packages with a guided workflow.", icon: "Upload" },
+  { title: "Versioned Releases", description: "Immutable versions with changelogs and rollback support.", icon: "GitBranch" },
+  { title: "Creator Storefront", description: "Your own profile page showcasing all your published packages.", icon: "Store" },
+  { title: "Sales Analytics", description: "Track revenue, installs, and engagement across all packages.", icon: "BarChart3" },
+  { title: "Reviews & Ratings", description: "Build trust through verified reviews from real users.", icon: "Star" },
+  { title: "80% Creator Revenue", description: "Keep 80% of every sale. No hidden fees or lock-in.", icon: "DollarSign" },
+];
+
+export const teamFeatures = [
+  { title: "Shared Workspaces", description: "Collaborate on projects in real-time team workspaces.", icon: "Users" },
+  { title: "Private Marketplace", description: "Internal package store for team-approved workflows.", icon: "Lock" },
+  { title: "Approved Packages", description: "Control which packages your team can install and use.", icon: "CheckCircle" },
+  { title: "Team Recipes", description: "Standardized command workflows shared across the team.", icon: "Zap" },
+  { title: "Audit Logs", description: "Complete audit trail of all workspace and package actions.", icon: "FileSearch" },
+  { title: "Role-based Access", description: "Owner, Admin, Developer, Creator, Viewer, and Billing roles.", icon: "Shield" },
+];
