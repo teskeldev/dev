@@ -2,13 +2,11 @@
 
 import { motion } from "framer-motion";
 import { Check } from "lucide-react";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
 import { pricingPlans } from "@/lib/mock-data";
 
 export function PricingCards() {
   return (
-    <section className="bg-[#F7F7F8] py-24">
+    <section className="border-t border-border/40 bg-white py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <motion.div
           className="mx-auto max-w-2xl text-center"
@@ -20,7 +18,7 @@ export function PricingCards() {
           <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
             Simple, transparent pricing
           </h2>
-          <p className="mt-4 text-lg text-muted-foreground">
+          <p className="mt-4 text-base text-muted-foreground">
             Start free. Upgrade when you need more power.
           </p>
         </motion.div>
@@ -29,10 +27,10 @@ export function PricingCards() {
           {pricingPlans.map((plan, i) => (
             <motion.div
               key={plan.name}
-              className={`relative rounded-2xl border bg-white p-6 transition-all hover:-translate-y-0.5 ${
+              className={`relative rounded-2xl border p-6 ${
                 plan.popular
-                  ? "border-teskel-accent shadow-[0_1px_2px_rgba(0,0,0,.04),0_8px_24px_rgba(0,0,0,.05)]"
-                  : "border-border"
+                  ? "border-foreground"
+                  : "border-border/60"
               }`}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -40,15 +38,15 @@ export function PricingCards() {
               transition={{ duration: 0.4, delay: i * 0.08 }}
             >
               {plan.popular && (
-                <Badge className="absolute -top-2.5 left-1/2 -translate-x-1/2 rounded-full bg-teskel-accent px-3 text-white">
+                <span className="absolute -top-2.5 left-1/2 -translate-x-1/2 rounded-full bg-foreground px-3 py-0.5 text-[10px] font-medium text-white">
                   Most popular
-                </Badge>
+                </span>
               )}
 
-              <h3 className="text-lg font-semibold text-foreground">
+              <h3 className="text-base font-semibold text-foreground">
                 {plan.name}
               </h3>
-              <p className="mt-1 text-sm text-muted-foreground">
+              <p className="mt-1 text-xs text-muted-foreground">
                 {plan.description}
               </p>
 
@@ -61,7 +59,7 @@ export function PricingCards() {
                       ${plan.price}
                     </span>
                     {plan.price > 0 && (
-                      <span className="text-sm text-muted-foreground">
+                      <span className="text-xs text-muted-foreground">
                         /mo{plan.perUser ? " per user" : ""}
                       </span>
                     )}
@@ -69,20 +67,21 @@ export function PricingCards() {
                 )}
               </div>
 
-              <Button
-                className={`mt-6 w-full rounded-full ${
-                  plan.popular ? "" : "bg-foreground hover:bg-foreground/90"
+              <button
+                className={`mt-6 w-full rounded-full py-2 text-sm font-medium transition-colors ${
+                  plan.popular
+                    ? "bg-foreground text-white hover:bg-foreground/90"
+                    : "bg-muted text-foreground hover:bg-muted/80"
                 }`}
-                variant={plan.popular ? "default" : "default"}
               >
                 {plan.cta}
-              </Button>
+              </button>
 
-              <ul className="mt-6 space-y-3">
+              <ul className="mt-6 space-y-2.5">
                 {plan.features.map((feature) => (
                   <li key={feature} className="flex items-start gap-2">
-                    <Check className="mt-0.5 h-4 w-4 shrink-0 text-teskel-accent" />
-                    <span className="text-sm text-muted-foreground">
+                    <Check className="mt-0.5 h-3.5 w-3.5 shrink-0 text-muted-foreground" />
+                    <span className="text-xs text-muted-foreground">
                       {feature}
                     </span>
                   </li>

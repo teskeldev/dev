@@ -15,19 +15,19 @@ const logos = [
 
 export function SocialProof() {
   return (
-    <section className="bg-[#F7F7F8] py-16">
+    <section className="bg-white py-16">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <motion.p
+        <motion.h2
           className="text-center text-sm font-medium text-muted-foreground"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          Trusted by developers building with
-        </motion.p>
+          Trusted every day by teams that build world-class software
+        </motion.h2>
         <motion.div
-          className="mt-8 flex flex-wrap items-center justify-center gap-x-10 gap-y-4"
+          className="mt-10 flex flex-wrap items-center justify-center gap-x-12 gap-y-6"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
@@ -36,7 +36,7 @@ export function SocialProof() {
           {logos.map((logo) => (
             <span
               key={logo}
-              className="text-lg font-semibold tracking-tight text-muted-foreground/40"
+              className="text-xl font-semibold tracking-tight text-muted-foreground/30"
             >
               {logo}
             </span>
